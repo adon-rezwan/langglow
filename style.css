@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body {
+			margin: 0;
+			padding: 0;
+			background-color: black;
+            font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+  background-color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 0 20px;
+  
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: transparent;
+  text-shadow: 0px 0px 20px #FFA500, 0px 0px 10px #FF4500;
+			animation: burn 2s ease-in-out infinite alternate;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  box-shadow:   0 0 10px white, 0 0 10px #FF4500, 0 0 10px #FFA500,0 0 20px white, 0 0 20px #FF4500, 0 0 20px #FFA500,0 0 30px white, 0 0 30px #FF4500, 0 0 30px #FFA500, 0 0 50px white, 0 0 60px #FF4500, 0 0 60px #FFA500;
+  animation: bg-color-change ease-in-out infinite alternate;
+
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+a:hover::before {
+  opacity: 1;
+}
+
+a:active {
+  animation: bg-color-change ease-in-out infinite alternate;
+}
+
+/*@keyframes bg-color-change {
+  from {
+   background-color: transparent;
+   box-shadow:inset 0px 0px 20px #FFA500, 0px 0px 20px #FFA500, 0px 0px 10px #FF4500;
+  }
+  to {
+    background-color: transparent;
+   box-shadow: inset 0px 0px 20px #FFA500, 0px 0px 50px #FFA500,inset 0px 0px 20px #FFA500, 0px 0px 20px #FFA500, 0px 0px 10px #FFA500, 0px 0px 5px #FF4500, 0px 0px 2px #FF4500;
+  }
+}*/
+
+
+.glow-btn {
+  /*background-color: #FFA500;*/
+  color: white;
+  background:transparent;
+  font-size: 24px;
+  padding: 12px 24px;
+  border: 2px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  top: 50px;
+  text-shadow: 0px 0px 20px #FFA500, 0px 0px 10px #FF4500;
+  box-shadow:  0px 0px 20px #FFA500, 0px 0px 10px #FF4500;
+			animation: burn 2s ease-in-out infinite alternate;
+}
+
+.glow-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 6px;
+  box-shadow: 0 0 10px white, 0 0 10px #FF4500, 0 0 10px #FFA500,0 0 20px white, 0 0 20px #FF4500, 0 0 20px #FFA500,0 0 30px white, 0 0 30px #FF4500, 0 0 30px #FFA500, 0 0 50px white, 0 0 60px #FF4500, 0 0 60px #FFA500;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.glow-btn:hover::before {
+  opacity: 1;
+}
+
+.glow-btn:active {
+  animation: bg-color-change ease-in-out infinite alternate;
+}
+
+
+/*@keyframes bg-color-change {
+  from {
+   background-color: transparent;
+				box-shadow:  0px 0px 20px #FFA500, 0px 0px 10px #FF4500;
+			}
+  to {
+    background-color: transparent;
+				box-shadow: 0px 0px 50px #FFA500, 0px 0px 20px #FFA500, 0px 0px 10px #FFA500, 0px 0px 5px #FF4500, 0px 0px 2px #FF4500;
+			}
+}*/
+
+
+		header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			height: 100vh;
+		}
+		
+		h1 {
+			background-color: transparent;
+			color: white;
+			font-size: 50px;
+			font-weight: normal;
+			margin: 0;
+			padding: 50px;
+			text-align: center;
+			text-shadow: 0px 0px 20px #FFA500, 0px 0px 10px #FF4500;
+			animation: burn 2s ease-in-out infinite alternate;
+		}
+		
+@keyframes burn {
+			from {
+				background-color: transparent;
+				text-shadow: 0px 0px 20px #FFA500, 0px 0px 10px #FF4500;
+			}
+			to {
+				background-color: transparent;
+				text-shadow: 0px 0px 50px #FFA500, 0px 0px 20px #FFA500, 0px 0px 10px #FFA500, 0px 0px 5px #FF4500, 0px 0px 2px #FF4500;
+			}
+		}
+		
+        @media only screen and (max-width: 600px) {
+
+            a::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  min-width: 20px;
+  top: 20px;
+  left: -20px;
+  right: 0px;
+  bottom: -5px;
+  border-radius: 10px;
+  box-shadow:   0 0 10px white, 0 0 10px #FF4500, 0 0 10px #FFA500,0 0 20px white, 0 0 20px #FF4500, 0 0 20px #FFA500,0 0 30px white, 0 0 30px #FF4500, 0 0 30px #FFA500, 0 0 50px white, 0 0 60px #FF4500, 0 0 60px #FFA500;
+  animation: bg-color-change ease-in-out infinite alternate;
+
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+        }
+
